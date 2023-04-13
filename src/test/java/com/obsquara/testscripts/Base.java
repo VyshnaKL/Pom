@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class Base {
 	public WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void intialisebrowser() {
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "\\src\\main\\java\\Resource\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
@@ -19,7 +19,7 @@ public class Base {
 		driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void browserQuit() {
 		driver.quit();
 	}

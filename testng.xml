@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="inputMessage" value="Abcd" />
+	<test thread-count="5" name="Test">
+		<classes>
+			<!--class name="com.obsquara.testscripts.RadioButtonDemoTest">
+				<methods>
+					<include name="verifyMaleRadioButton" />
+					<exclude name="verifyFemaleRadioButton" />
+					<include name="verifyGroupRadioButtonsDemoGender" />
+				</methods>
+			</class>-->
+
+			<!-- <class name="com.obsquara.testscripts.CheckBoxDemoTest">
+				<methods>
+					<include name="verifyCheckBoxDemo" />
+					<include name="verifySelectMultipleCheckBoxDemo" />
+					<include name="verifyUnselectAllButton" />
+				</methods>
+			</class>-->
+			<!--class name="com.obsquara.testscripts.SelectInputTest"/>
+<methods>
+</methods>
+</class>-->
+
+			<class name="com.obsquara.testscripts.SimpleInputFormDemoTest">
+				<methods>
+					<include name="verifySingleInputField" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

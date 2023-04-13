@@ -29,5 +29,33 @@ public class SelectInputTest extends Base {
 		assertEquals(expectedColor, actualdisplayedColor, "Color displayed is not the expected one");
 
 	}
+	@Test
+	
+	public void multipleSelectionInputIndex() {
+		selectInputPage = new SelectInputPage(driver);
+		SelectCategory SelectCategoryObject = new SelectCategory(driver);
+		SelectCategoryObject.listFindElements("Select Input");
+		selectInputPage.multiSelectColorElement();
+		Select selectObject = new Select(selectInputPage.multiSelectColorElement());
+		selectInputPage.getAllSelectButtonElement();
+		boolean isMultipleDropdown = selectObject.isMultiple();
+		selectObject.selectByIndex(1);
+		
+		
+		
+	}
+	@Test
+	
+	public void multipleSelectionInputValue() {
+		selectInputPage = new SelectInputPage(driver);
+		SelectCategory SelectCategoryObject = new SelectCategory(driver);
+		SelectCategoryObject.listFindElements("Select Input");
+		selectInputPage.multiSelectColorElement();
+		Select selectObject = new Select(selectInputPage.multiSelectColorElement());
+		selectInputPage.getAllSelectButtonElement();
+		boolean isMultipleDropdown = selectObject.isMultiple();
+		selectObject.selectByValue("Yellow");
+		
+	}
 
 }
